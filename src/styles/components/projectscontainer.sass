@@ -1,0 +1,60 @@
+@use '../variables'
+@use '../mixins'
+
+.projects-container
+
+    .project-cards
+        width: 100%
+        display: flex
+        flex-direction: row
+        gap: 1.5rem
+        margin-bottom: 2rem
+
+        .project-card
+            display: flex
+            flex-direction: column
+            position: relative
+            width: 250px
+            height: 400px
+            @include mixins.center
+            transition: transform .2s
+            border: 1px solid #333
+            border-radius: variables.$card-border-radius
+
+            .logo
+                height: 30%
+                @include mixins.center
+                background-color: #333
+
+                .logo-card
+                    width: 70%
+
+            .info-container
+                background: #fef7f7
+                border-bottom-right-radius: variables.$card-border-radius
+                border-bottom-left-radius: variables.$card-border-radius
+                padding: 1rem
+                width: 100%
+                height: 70%
+
+                h3
+                    color: #333
+                    margin: 1rem 0
+                    text-align: center
+
+                #description-card
+                    font-weight: 100
+                    font-size: 1.2rem
+                    text-align: justify
+                    padding: 0 1rem
+
+                .btn
+                    position: absolute
+                    bottom: 1rem
+                    text-align: center
+                    right: 4rem
+                    left: 4rem
+
+        #card:hover
+            transform: scale(1.05)
+            transition: .2s
