@@ -14,7 +14,7 @@ const Sidebar = () => {
       <SocialNetworks/>
       <InformationContainer/>
       <a href="" className="btn">
-        Download currículo
+        Download CV
       </a>
     </aside>
   )

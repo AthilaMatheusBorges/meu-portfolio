@@ -1,25 +1,37 @@
 import React from 'react'
-import meuHabito from '../img/meuHabito.png'
+import meuHabito from '../img/meuhabito.png'
+
+import {
+    DiHtml5,
+    DiCss3,
+    DiJsBadge,
+    DiNodejsSmall,
+    DiMysql,
+    DiReact,
+    DiDart
+} from 'react-icons/di'
+
+import { RiFlutterFill } from 'react-icons/ri'
 
 import '../styles/components/projectscontainer.sass'
 
 const projects = [
     {
-        nome: 'meuHabito',
+        nome: 'meuHábito',
         logo: meuHabito,
-        decription: 'Flutter'
+        tech: [<RiFlutterFill />, <DiDart />, <DiMysql />],
+        link: 'https://github.com/AthilaMatheusBorges/meu_habito'
     },
-    {
-        nome: 'meuHabito',
-        logo: meuHabito,
-        decription: ''
-    },
-    {
-        nome: 'meuHabito',
-        logo: meuHabito,
-        decription:
-            ''
-    }
+    // {
+    //     nome: 'meuHabito',
+    //     logo: meuHabito,
+    //     decription: ''
+    // },
+    // {
+    //     nome: 'meuHabito',
+    //     logo: meuHabito,
+    //     decription: ''
+    // }
 ]
 
 const ProjectsContainer = () => {
@@ -29,20 +41,19 @@ const ProjectsContainer = () => {
             <div className="project-cards">
                 {projects.map(project => (
                     <div className="project-card" id="card" key={project.nome}>
-                        <div className="logo">
-                            <img
-                                src={project.logo}
-                                alt=""
-                                className="logo-card"
-                            />
-                        </div>
-                        <div className="info-container">
+                        <img src={project.logo} alt="" className="logo-card" />
+                        <div className="desfoque"></div>
+                        <div className="info-project">
                             <h3>{project.nome}</h3>
-                            <p id="description-card">{project.decription}</p>
-                            <a href="" className="btn">
-                                Repositório
-                            </a>
+                            <div className="icons">
+                                {project.tech.map(logo => (
+                                    <div>
+                                        {logo}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+                        <h4>Clique para ver mais...</h4>
                     </div>
                 ))}
             </div>
