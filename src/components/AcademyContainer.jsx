@@ -10,7 +10,7 @@ const formacoes = [
         id: 'UFCG',
         periodo: '2017 - 2024',
         curso: 'Ciência da Computação',
-        descricao: 'Curso de bacharelado em Ciência da Computação',
+        descricao: 'Curso de bacharelado em Ciência da Computação.',
         logo: ufcg
     },
     {
@@ -36,9 +36,9 @@ const AcademyContainer = () => {
                             <img src={curso.logo} alt="" className="logo" />
 
                             <div className="info">
-                                <h3>Instituição: {curso.id}</h3>
-                                <h3>Período: {curso.periodo}</h3>
-                                <h3 className="descricao">{curso.descricao}</h3>
+                                <h3 id="descricao">Instituição: {curso.id}</h3>
+                                <h3 id="descricao">Período: {curso.periodo}</h3>
+                                <h3 id="descricao">{curso.descricao}</h3>
                             </div>
                         </div>
                     </div>

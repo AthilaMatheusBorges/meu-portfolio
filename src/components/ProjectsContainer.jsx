@@ -21,7 +21,7 @@ const projects = [
         logo: meuHabito,
         tech: [<RiFlutterFill />, <DiDart />, <DiMysql />],
         link: 'https://github.com/AthilaMatheusBorges/meu_habito'
-    },
+    }
     // {
     //     nome: 'meuHabito',
     //     logo: meuHabito,
@@ -40,21 +40,23 @@ const ProjectsContainer = () => {
             <h2>Projetos</h2>
             <div className="project-cards">
                 {projects.map(project => (
-                    <div className="project-card" id="card" key={project.nome}>
-                        <img src={project.logo} alt="" className="logo-card" />
+                    <a className="project-card" id="card" key={project.nome} href={project.link} target='_blank'>
+                            <img
+                                src={project.logo}
+                                alt=""
+                                className="logo-card"
+                            />
                         <div className="desfoque"></div>
                         <div className="info-project">
                             <h3>{project.nome}</h3>
                             <div className="icons">
                                 {project.tech.map(logo => (
-                                    <div>
-                                        {logo}
-                                    </div>
+                                    <div>{logo}</div>
                                 ))}
                             </div>
                         </div>
                         <h4>Clique para ver mais...</h4>
-                    </div>
+                    </a>
                 ))}
             </div>
         </section>
