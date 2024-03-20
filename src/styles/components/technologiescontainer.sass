@@ -19,9 +19,11 @@
             border-block-end: 6px solid rgba(74, 89, 137, 1)
             width: 150px
             margin: 10px
-            
+
             flex-direction: column
             border-top-left-radius: 40px
+
+            
 
             h3
                 color: variables.$text-color
@@ -30,3 +32,18 @@
             svg
                 font-size: 6rem
                 color: rgba(74, 89, 137, 1)
+
+        @media screen and (max-width: 767px)
+                .technology-card
+                    width: 85px
+                    margin: auto 0
+                    gap: 5px
+                    border-top-left-radius: 30px
+                    
+                    #technology-text
+                        font-size: 14px
+
+                    svg
+                        font-size: 2.5rem
+                    
+                        

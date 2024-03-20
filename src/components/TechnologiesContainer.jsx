@@ -49,18 +49,15 @@ const TechnologiesContainer = () => {
             //disableOnInteraction: true,
           }}
           loop={true}
-          spaceBetween={15}
-          slidesPerView={(innerWidth * 0.65) / 200}
+          slidesPerView={width < 767 ? (width * 0.65) / 100   :  (width * 0.65) / 200}
           scrollbar={{ draggable: true }}
-          onSwiper={swiper => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
         >
           {technologies.map(tech => (
             <SwiperSlide key={tech.id}>
               <div className="technology-card" id={tech.id}>
                 {tech.icon}
                 <div className="technology-info">
-                  <h3>{tech.name}</h3>
+                  <h3 id='technology-text'>{tech.name}</h3>
                 </div>
               </div>
             </SwiperSlide>
